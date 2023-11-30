@@ -6,7 +6,7 @@ import App from './components/App/App';
 
 ReactDOM.createRoot(document.querySelector('#root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/goit-react-hw-05-movies/">
+    <BrowserRouter basename="/goit-test-career-skills/">
       <App />
     </BrowserRouter>
   </React.StrictMode>,

@@ -40,5 +40,5 @@ export default defineConfig({
     // autoAlias({ mode: 'sync' }),
     // Icons()
   ],
-  base: '/goit-react-hw-05-movies/', // має відповідати шляху в index.jsx
+  base: '/goit-test-career-skills/', // має відповідати шляху в index.jsx
 });

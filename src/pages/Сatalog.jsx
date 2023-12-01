@@ -4,7 +4,6 @@ import useDataFetching from '../services/useDataFetching';
 function Сatalog() {
   const { results, loading, total, handleLoadMore } = useDataFetching(
     'trending',
-    '',
     1,
   );
 

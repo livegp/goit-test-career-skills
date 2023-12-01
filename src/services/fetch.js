@@ -6,28 +6,23 @@ axios.defaults.params = {
   api_key: 'd1c21e798be8e69642bc9e5fdadcfaf6',
 };
 
-async function fetch(endpoint, search, page, selected) {
+const fetch = async (endpoint, page, selected) => {
   const ENDPOINTS = {
     trending: '/trending/movie/day',
-    searchMovies: '/search/movie',
     movieDetails: `/movie/${selected}`,
-    movieCredits: `/movie/${selected}/credits`,
-    movieReviews: `/movie/${selected}/reviews`,
   };
 
   const url = ENDPOINTS[endpoint];
-  const parameters = {
-    ...(selected ? {} : { page }),
-    ...(search ? { query: search, page } : {}),
-  };
+  const parameters = selected ? {} : { page };
 
   try {
     const response = await axios.get(url, { params: parameters });
     return response.data;
   } catch (error) {
+    const errorMessage = `API request failed: ${error.message}`;
     toast.error(`Error fetching data: ${error.message}`);
-    throw new Error(`API request failed: ${error.message}`);
+    throw new Error(errorMessage);
   }
-}
+};
 
 export default fetch;

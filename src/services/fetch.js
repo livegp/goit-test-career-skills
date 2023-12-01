@@ -1,11 +1,9 @@
-import ky from 'ky';
+import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const BASE_URL = 'https://api.themoviedb.org/3';
-const API_KEY = 'd1c21e798be8e69642bc9e5fdadcfaf6';
-
-const DEFAULT_PARAMS = {
-  api_key: API_KEY,
+axios.defaults.baseURL = 'https://api.themoviedb.org/3';
+axios.defaults.params = {
+  api_key: 'd1c21e798be8e69642bc9e5fdadcfaf6',
 };
 
 async function fetch(endpoint, search, page, selected) {
@@ -17,17 +15,15 @@ async function fetch(endpoint, search, page, selected) {
     movieReviews: `/movie/${selected}/reviews`,
   };
 
-  const url = `${BASE_URL}${ENDPOINTS[endpoint]}`;
-  const options = {
-    searchParams: {
-      ...DEFAULT_PARAMS,
-      ...(selected ? {} : { page }),
-      ...(search ? { query: search, page } : {}),
-    },
+  const url = ENDPOINTS[endpoint];
+  const parameters = {
+    ...(selected ? {} : { page }),
+    ...(search ? { query: search, page } : {}),
   };
 
   try {
-    return await ky.get(url, options).json();
+    const response = await axios.get(url, { params: parameters });
+    return response.data;
   } catch (error) {
     toast.error(`Error fetching data: ${error.message}`);
     throw new Error(`API request failed: ${error.message}`);

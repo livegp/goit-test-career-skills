@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { RiMovie2Line } from 'react-icons/ri';
+import { FaCar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 import LogoBox from './Logo.styled';
@@ -22,8 +22,8 @@ function Logo() {
   return (
     <LogoBox>
       <Link to="/">
-        <RiMovie2Line />
-        {windowWidth >= 600 && <p>Movies</p>}
+        <FaCar />
+        {windowWidth >= 600 && <p>AutoMarket</p>}
       </Link>
     </LogoBox>
   );

@@ -7,7 +7,8 @@ function Footer() {
       <Container>
         <p>
           {' '}
-          &copy; 2023 Movies App. All rights reserved. Designed and Developed by{' '}
+          &copy; 2023 AutoMarket App. All rights reserved. Designed and
+          Developed by{' '}
           <a
             target="_blank"
             rel="noreferrer"

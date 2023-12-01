@@ -1,15 +1,14 @@
 import PropTypes from 'prop-types';
 
 import GalleryItem from './GalleryItem/GalleryItem';
-import { Container, Title } from './GalleryList.styled';
+import { Container } from './GalleryList.styled';
 import LoadButton from '../LoadButton/LoadButton';
 import Loader from '../Loader/Loader';
 
-function GalleryList({ results, title, loading, onLoadMore, total }) {
+function GalleryList({ results, loading, onLoadMore, total }) {
   const showPoster = Array.isArray(results) && results.length > 0;
   return (
     <>
-      <Title>{title}</Title>
       {showPoster && (
         <Container>
           {results.map(post => (
@@ -33,7 +32,7 @@ GalleryList.propTypes = {
       title: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
-  title: PropTypes.string.isRequired,
+  // title: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
   onLoadMore: PropTypes.func.isRequired,
   total: PropTypes.number.isRequired,

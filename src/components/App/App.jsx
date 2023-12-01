@@ -9,10 +9,8 @@ import ScrollTop from '../ScrollTop/ScrollTop';
 const Loader = lazy(() => import('../Loader/Loader'));
 const SharedLayout = lazy(() => import('../SharedLayout/SharedLayout'));
 const Home = lazy(() => import('../../pages/Home'));
-const Movies = lazy(() => import('../../pages/Movies'));
-const MoviesDetails = lazy(() => import('../../pages/MoviesDetails'));
-const Cast = lazy(() => import('../Cast/Cast'));
-const Reviews = lazy(() => import('../Reviews/Reviews'));
+const Сatalog = lazy(() => import('../../pages/Сatalog'));
+const Favorites = lazy(() => import('../../pages/Favorites'));
 
 function App() {
   return (
@@ -23,11 +21,8 @@ function App() {
         <Routes>
           <Route path="/" element={<SharedLayout />}>
             <Route index element={<Home />} />
-            <Route path="movies" element={<Movies />} />
-            <Route path="movies/:id" element={<MoviesDetails />}>
-              <Route path="cast" element={<Cast />} />
-              <Route path="reviews" element={<Reviews />} />
-            </Route>
+            <Route path="catalog" element={<Сatalog />} />
+            <Route path="favorites" element={<Favorites />} />
             <Route path="*" element={<Navigate to="/" />} />
             {/* <Route path="*" element={<NotFound />} /> */}
           </Route>

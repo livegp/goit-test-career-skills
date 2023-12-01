@@ -1,24 +1,5 @@
-import GalleryList from '../components/GalleryList/GalleryList';
-import useDataFetching from '../services/useDataFetching';
-
 function Home() {
-  const title = 'In trend';
-
-  const { results, loading, total, handleLoadMore } = useDataFetching(
-    'trending',
-    '',
-    1,
-  );
-
-  return (
-    <GalleryList
-      results={results}
-      title={title}
-      loading={loading}
-      onLoadMore={handleLoadMore}
-      total={total}
-    />
-  );
+  return <h1>AUTOMARKET</h1>;
 }
 
 export default Home;

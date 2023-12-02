@@ -3,10 +3,11 @@ import { normalize } from 'styled-normalize';
 import { reset } from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
-
 ${normalize}
 
 ${reset}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
 
 :root {
   --trans: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -47,8 +48,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: 'Manrope', sans-serif;
   overflow-y: scroll;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

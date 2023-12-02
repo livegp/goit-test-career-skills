@@ -8,10 +8,6 @@ const Button = styled.button`
   text-decoration: none;
   cursor: pointer;
   font-family: inherit;
-  font-size: 18px;
-  line-height: 24px;
-  font-style: normal;
-  font-weight: 500;
   max-width: 100%;
   height: 44px;
   box-shadow:
@@ -21,6 +17,11 @@ const Button = styled.button`
   color: rgba(var(--text-primary), 1);
   background-color: rgba(var(--accent), 1);
   transition: var(--trans);
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
 
   &:hover,
   &:focus {

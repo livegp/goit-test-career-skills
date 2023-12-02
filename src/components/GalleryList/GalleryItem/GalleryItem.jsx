@@ -34,13 +34,13 @@ function GalleryItem({ data }) {
         <Box>
           <Title>
             <p>
-              {make}, {year}
+              {make} {model}, {year}
             </p>
             <p>{rentalPrice}</p>
           </Title>
           <SubTitle>
-            {city} | {country} | {rentalCompany} | {type} | {model} | {mileage}{' '}
-            | {functionalities}{' '}
+            {city} | {country} | {rentalCompany} | {type} | {mileage} |{' '}
+            {functionalities}
           </SubTitle>
         </Box>
       </div>

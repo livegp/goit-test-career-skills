@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
-import Container from './GalleryItem.styled';
+import { Container, Title } from './GalleryItem.styled';
+import LoadMoreButton from '../../LoadMoreButton/LoadMoreButton';
 
 const defaultImg =
   'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
@@ -24,13 +25,19 @@ function GalleryItem({ data }) {
   return (
     <Container>
       <img src={url} width={250} alt={make} role="presentation" />
-      <p>
-        {make}, {year}, {rentalPrice}
-      </p>
-      <p>
-        {address} | {rentalCompany} | {type} | {model} | {mileage} |{' '}
-        {functionalities}{' '}
-      </p>
+      <div>
+        <Title>
+          <p>
+            {make}, {year}
+          </p>
+          <p>{rentalPrice}</p>
+        </Title>
+        <p>
+          {address} | {rentalCompany} | {type} | {model} | {mileage} |{' '}
+          {functionalities}{' '}
+        </p>
+      </div>
+      <LoadMoreButton>Learn more</LoadMoreButton>
     </Container>
   );
 }

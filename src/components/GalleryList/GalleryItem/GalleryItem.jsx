@@ -34,7 +34,7 @@ function GalleryItem({ data }) {
         <Box>
           <Title>
             <p>
-              {make} {model}, {year}
+              {make} <span>{model}</span>, {year}
             </p>
             <p>{rentalPrice}</p>
           </Title>

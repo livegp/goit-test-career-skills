@@ -25,6 +25,10 @@ export const Title = styled.div`
   color: #121417;
   font-weight: 500;
   line-height: 24px;
+
+  span {
+    color: rgba(var(--accent), 1);
+  }
 `;
 
 export const SubTitle = styled.p`

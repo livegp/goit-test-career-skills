@@ -1,4 +1,4 @@
-import{s as t,j as r,G as c,r as a,L as g,N as h,c as p,O as x}from"./index-9pCnljOR.js";import m from"./Loader-KUb5I-Gp.js";const v=t.div`
+import{s as t,j as r,G as c,r as a,L as g,N as p,c as h,O as x}from"./index-b12MS36t.js";import m from"./Loader-hOrnaZuz.js";const v=t.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
@@ -7,12 +7,12 @@ import{s as t,j as r,G as c,r as a,L as g,N as h,c as p,O as x}from"./index-9pCn
   padding: 25px 10px;
   margin: 0 auto;
 `,u=t.footer`
-  color: rgba(var(--text-primary), 1);
+  color: rgba(var(--bg-primary), 1);
   background-color: rgba(var(--accent), 1);
   transition: var(--trans);
 
   a {
-    color: #dfe3ee;
+    color: rgba(var(--bg-primary), 1);
     transition: var(--trans);
 
     &:hover {
@@ -83,7 +83,7 @@ import{s as t,j as r,G as c,r as a,L as g,N as h,c as p,O as x}from"./index-9pCn
     height: 100%;
     gap: 5px;
   }
-`,s=t(h)`
+`,s=t(p)`
   display: block;
   border-radius: 4px;
   border: 2px solid transparent;
@@ -138,7 +138,7 @@ import{s as t,j as r,G as c,r as a,L as g,N as h,c as p,O as x}from"./index-9pCn
     opacity: 0;
     display: none;
   }
-`,d=p`   
+`,d=h`   
   0% {
     transform: rotate(-360deg) scale(0);
     opacity: 0;

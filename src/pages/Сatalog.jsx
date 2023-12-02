@@ -1,19 +1,18 @@
+import { toast } from 'react-toastify';
+
 import GalleryList from '../components/GalleryList/GalleryList';
-import useDataFetching from '../services/useDataFetching';
+import Loader from '../components/Loader/Loader';
+import { useGetAdvertsQuery } from '../services/advertsSlice';
 
 function Сatalog() {
-  const { results, loading, total, handleLoadMore } = useDataFetching(
-    'trending',
-    1,
-  );
+  const { data, error, isLoading } = useGetAdvertsQuery();
 
   return (
-    <GalleryList
-      results={results}
-      loading={loading}
-      onLoadMore={handleLoadMore}
-      total={total}
-    />
+    <>
+      {isLoading && <Loader />}
+      {error && <div>{toast.error('Error deleting contact:', error)}</div>}
+      {!isLoading && !error && <GalleryList data={data} />}
+    </>
   );
 }
 

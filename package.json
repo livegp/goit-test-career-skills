@@ -1,9 +1,9 @@
 {
-  "name": "goit-react-hw-08-phonebook",
+  "name": "goit-test-career-skills",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://livegp.github.io/goit-react-hw-08-phonebook/",
+  "homepage": "https://livegp.github.io/goit-test-career-skills/",
   "scripts": {
     "start": "vite",
     "build": "vite build",

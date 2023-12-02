@@ -13,7 +13,7 @@ const useDataFetching = (endpoint, initialPage = 1) => {
     setLoading(true);
 
     try {
-      const newData = await fetch(endpoint, page);
+      const newData = await fetch(endpoint);
       setTotal(newData.total_results);
       setResults(previousResults =>
         page === 1 ? newData.results : [...previousResults, ...newData.results],

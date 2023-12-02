@@ -13,7 +13,7 @@ ${reset}
 }
 
 [data-theme='light'] {
-  --accent: 58,87,149;
+  --accent: 52, 112, 255;
   --bg-primary: 237,240,245;
   --bg-secondary: 99,123,173;
   --text: 58,87,149;
@@ -23,7 +23,7 @@ ${reset}
 }
 
 [data-theme='dark'] {
-  --accent: 58,87,149;
+  --accent: 52, 112, 255;
   /* --bg-primary: 51,51,51; */
   --bg-primary: 0,0,0;
   --bg-secondary: 51,51,51;

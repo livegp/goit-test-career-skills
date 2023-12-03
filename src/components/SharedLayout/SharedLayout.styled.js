@@ -13,7 +13,7 @@ export const Container = styled.div`
   padding: 25px 10px;
   margin: 0 auto;
 
-  display: grid;
+  /* display: grid; */
   justify-items: center;
   gap: 25px;
 `;

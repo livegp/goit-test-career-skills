@@ -1,4 +1,4 @@
-import{s as t,j as r,r as a,L as g,N as p,G as l,c as h,O as x}from"./index-Wjz55jhs.js";import{F as m}from"./index.esm-CT6yq6n8.js";import f from"./Loader-jobS29lr.js";const u=t.div`
+import{s as t,j as r,r as a,L as g,N as p,G as l,c as h,O as x}from"./index-U0sZATLw.js";import{F as m}from"./index.esm-WHCRk0N6.js";import f from"./Loader-5oKPRX4j.js";const u=t.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
@@ -9,7 +9,7 @@ import{s as t,j as r,r as a,L as g,N as p,G as l,c as h,O as x}from"./index-Wjz5
   padding: 25px 10px;
   margin: 0 auto;
 
-  display: grid;
+  /* display: grid; */
   justify-items: center;
   gap: 25px;
 `,v=t.footer`

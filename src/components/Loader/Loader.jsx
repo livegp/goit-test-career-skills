@@ -8,7 +8,7 @@ function Loader() {
       <Bars
         height="40"
         width="40"
-        color="#3b5998"
+        color="#3470FF"
         ariaLabel="bars-loading"
         wrapperStyle={{}}
         wrapperClass=""

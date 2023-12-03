@@ -1,13 +1,17 @@
 import PropTypes from 'prop-types';
+import { FaCar } from 'react-icons/fa';
 
-import { Box, Container, SubTitle, Title } from './GalleryItem.styled';
+import {
+  Box,
+  Container,
+  NoneImgBox,
+  SubTitle,
+  Title,
+} from './GalleryItem.styled';
+import Checkbox from '../../Checkbox/Checkbox';
 import LoadMoreButton from '../../LoadMoreButton/LoadMoreButton';
 
-const defaultImg =
-  'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
-
 function GalleryItem({ data }) {
-  console.log('data', data);
   const {
     img,
     make,
@@ -24,13 +28,19 @@ function GalleryItem({ data }) {
   const addressWords = address.split(',');
   const city = addressWords[1].trim();
   const country = addressWords[2] ? addressWords[2].trim() : '';
-
-  const url = img ? `${img}` : defaultImg;
+  const firstFunctionality = functionalities[0];
 
   return (
     <Container>
+      <Checkbox />
       <div>
-        <img src={url} width={250} alt={make} role="presentation" />
+        {img ? (
+          <img src={img} width={250} alt={make} role="presentation" />
+        ) : (
+          <NoneImgBox>
+            <FaCar />
+          </NoneImgBox>
+        )}
         <Box>
           <Title>
             <p>
@@ -40,7 +50,7 @@ function GalleryItem({ data }) {
           </Title>
           <SubTitle>
             {city} | {country} | {rentalCompany} | {type} | {mileage} |{' '}
-            {functionalities}
+            {firstFunctionality}
           </SubTitle>
         </Box>
       </div>

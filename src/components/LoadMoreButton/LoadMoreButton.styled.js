@@ -14,7 +14,7 @@ const Button = styled.button`
     0px 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14),
     0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-  color: rgba(var(--text-primary), 1);
+  color: rgba(var(--bg-primary), 1);
   background-color: rgba(var(--accent), 1);
   transition: var(--trans);
 

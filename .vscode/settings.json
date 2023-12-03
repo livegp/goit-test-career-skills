@@ -33,5 +33,6 @@
     "toastify",
     "Toastify",
     "Wrappen"
-  ]
+  ],
+  "svg.preview.background": "editor"
 }

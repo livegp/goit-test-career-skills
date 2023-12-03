@@ -15,6 +15,7 @@ ${reset}
   --accent: 52, 112, 255;
   --bg-primary: 237,240,245;
   --bg-secondary: 99,123,173;
+  --bg-innert: 0,0,0;
   --text: 58,87,149;
   --text-primary: 237,240,245;
   --text-secondary: 58,87,149;
@@ -26,6 +27,7 @@ ${reset}
   /* --bg-primary: 51,51,51; */
   --bg-primary: 0,0,0;
   --bg-secondary: 51,51,51;
+  --bg-innert: 237,240,245;
   --text: 173,185,211;
   --text-primary: 237,240,245;
   --text-secondary: 58,87,149;

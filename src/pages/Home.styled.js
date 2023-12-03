@@ -17,8 +17,8 @@ export const Back = styled.div`
       rgba(var(--bg-primary), 0)
     ),
     url('./img/avtomobili.webp');
-
   background-repeat: no-repeat;
+  transition: var(--trans);
 `;
 
 export const Title = styled.h1`

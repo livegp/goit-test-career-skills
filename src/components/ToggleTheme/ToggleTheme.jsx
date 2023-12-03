@@ -28,7 +28,7 @@ function ToggleTheme() {
   };
 
   return (
-    <LabelToggleTheme className="switcher">
+    <LabelToggleTheme>
       <input
         type="checkbox"
         onChange={handleToggle}

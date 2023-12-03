@@ -1,4 +1,4 @@
-import{s as a,j as r}from"./index-5Uj1Tmiz.js";const i=a.div`
+import{s as a,j as r}from"./index-1ez0DkpZ.js";const t=a.div`
   height: 100%;
   width: 100%;
   display: flex;
@@ -15,12 +15,12 @@ import{s as a,j as r}from"./index-5Uj1Tmiz.js";const i=a.div`
       rgba(var(--bg-primary), 0)
     ),
     url('./img/avtomobili.webp');
-
   background-repeat: no-repeat;
-`,t=a.h1`
+  transition: var(--trans);
+`,i=a.h1`
   font-size: 40px;
   line-height: 48px;
   font-weight: bold;
   color: rgba(var(--accent), 1);
   transition: var(--trans);
-`;function e(){return r.jsx(i,{children:r.jsxs(t,{children:["Find the car ",r.jsx("br",{})," of your dreams"]})})}export{e as default};
+`;function e(){return r.jsx(t,{children:r.jsxs(i,{children:["Find the car ",r.jsx("br",{})," of your dreams"]})})}export{e as default};

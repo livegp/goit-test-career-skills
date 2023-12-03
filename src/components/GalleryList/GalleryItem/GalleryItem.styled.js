@@ -9,6 +9,7 @@ export const Container = styled.li`
     0px 1px 3px 0px rgba(var(--bg-innert), 0.2),
     0px 1px 1px 0px rgba(var(--bg-innert), 0.14),
     0px 2px 1px -1px rgba(var(--bg-innert), 0.12);
+  transition: var(--trans);
 
   img {
     width: 100%;
@@ -26,11 +27,13 @@ export const ImgBox = styled.div`
   align-content: center;
   justify-content: center;
   background-color: rgba(var(--accent), 0.5);
+  transition: var(--trans);
 
   svg {
     width: 100px;
     height: 100px;
     fill: rgba(var(--bg-primary), 1);
+    transition: var(--trans);
   }
 `;
 
@@ -46,6 +49,7 @@ export const Title = styled.div`
   color: rgba(var(--bg-innert), 0.8);
   font-weight: 500;
   line-height: 24px;
+  transition: var(--trans);
 
   span {
     color: rgba(var(--accent), 1);
@@ -58,4 +62,5 @@ export const SubTitle = styled.p`
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
+  transition: var(--trans);
 `;

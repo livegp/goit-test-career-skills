@@ -1,4 +1,4 @@
-import{s as t,j as r,r as a,L as g,N as p,G as l,c as h,O as x}from"./index-GBvq_qwp.js";import{F as m}from"./index.esm-y3YU2NSV.js";import f from"./Loader-WHiGtsrd.js";const u=t.div`
+import{s as t,j as r,r as a,L as g,N as p,G as l,c as h,O as x}from"./index-Zl5mY3pD.js";import{F as m}from"./index.esm-hrmcn96W.js";import f from"./Loader-WTd7Cu3A.js";const u=t.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
@@ -27,7 +27,7 @@ import{s as t,j as r,r as a,L as g,N as p,G as l,c as h,O as x}from"./index-GBvq
   z-index: 10;
   background-color: rgba(var(--accent), 1);
   transition: var(--trans);
-`,w=t(c)`
+`,y=t(c)`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,7 +36,7 @@ import{s as t,j as r,r as a,L as g,N as p,G as l,c as h,O as x}from"./index-GBvq
   height: 100%;
   padding: 15px;
   gap: 25px;
-`,y=t.div`
+`,w=t.div`
   order: 1;
   flex-grow: 0;
   margin-right: 25px;
@@ -69,7 +69,7 @@ import{s as t,j as r,r as a,L as g,N as p,G as l,c as h,O as x}from"./index-GBvq
     color: rgba(var(--bg-primary), 1);
     transition: var(--trans);
   }
-`;function k(){const[e,o]=a.useState(window.innerWidth);return a.useEffect(()=>{const n=()=>{o(window.innerWidth)};return window.addEventListener("resize",n),()=>{window.removeEventListener("resize",n)}},[]),r.jsx(y,{children:r.jsxs(g,{to:"/",children:[r.jsx(m,{}),e>=600&&r.jsx("p",{children:"AutoMarket"})]})})}const L=t.nav`
+`;function k(){const[e,o]=a.useState(window.innerWidth);return a.useEffect(()=>{const n=()=>{o(window.innerWidth)};return window.addEventListener("resize",n),()=>{window.removeEventListener("resize",n)}},[]),r.jsx(w,{children:r.jsxs(g,{to:"/",children:[r.jsx(m,{}),e>=600&&r.jsx("p",{children:"AutoMarket"})]})})}const L=t.nav`
   display: block;
   margin-top: 0;
   position: static;
@@ -153,9 +153,9 @@ import{s as t,j as r,r as a,L as g,N as p,G as l,c as h,O as x}from"./index-GBvq
   animation: ${d} 0.5s;
 `,B=t(T)`
   animation: ${d} 0.5s;
-`;function E(){const[e,o]=a.useState(()=>{const i=window.matchMedia("(prefers-color-scheme: dark)").matches;return localStorage.getItem("theme")||(i?"dark":"light")});a.useEffect(()=>{localStorage.setItem("theme",e)},[e]),a.useEffect(()=>{const{body:i}=document;i.dataset.theme=e},[e]);const n=()=>{o(e==="light"?"dark":"light")};return r.jsxs(C,{className:"switcher",children:[r.jsx("input",{type:"checkbox",onChange:n,checked:e==="dark"}),e==="dark"?r.jsx(S,{}):r.jsx(B,{})]})}function F(){return r.jsx(j,{children:r.jsxs(w,{children:[r.jsx(k,{}),r.jsx(z,{}),r.jsx(E,{})]})})}const N=t.main`
+`;function E(){const[e,o]=a.useState(()=>{const i=window.matchMedia("(prefers-color-scheme: dark)").matches;return localStorage.getItem("theme")||(i?"dark":"light")});a.useEffect(()=>{localStorage.setItem("theme",e)},[e]),a.useEffect(()=>{const{body:i}=document;i.dataset.theme=e},[e]);const n=()=>{o(e==="light"?"dark":"light")};return r.jsxs(C,{children:[r.jsx("input",{type:"checkbox",onChange:n,checked:e==="dark"}),e==="dark"?r.jsx(S,{}):r.jsx(B,{})]})}function F(){return r.jsx(j,{children:r.jsxs(y,{children:[r.jsx(k,{}),r.jsx(z,{}),r.jsx(E,{})]})})}const W=t.main`
   display: flex;
   height: 100%;
   justify-content: center;
   align-items: center;
-`;function W(){return r.jsx(N,{children:r.jsx(c,{children:r.jsx(a.Suspense,{fallback:r.jsx(f,{}),children:r.jsx(x,{})})})})}function I(){return r.jsxs(u,{children:[r.jsx(F,{}),r.jsx(W,{}),r.jsx(b,{})]})}export{I as default};
+`;function N(){return r.jsx(W,{children:r.jsx(c,{children:r.jsx(a.Suspense,{fallback:r.jsx(f,{}),children:r.jsx(x,{})})})})}function I(){return r.jsxs(u,{children:[r.jsx(F,{}),r.jsx(N,{}),r.jsx(b,{})]})}export{I as default};

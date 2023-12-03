@@ -29,6 +29,7 @@ const Label = styled.label`
       checked === true
         ? 'rgba(var(--accent), 1)'
         : 'rgba(var(--bg-primary), 1)'};
+    transition: var(--trans);
   }
 `;
 

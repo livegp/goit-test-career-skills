@@ -54,10 +54,23 @@ function GalleryItem({ data }) {
 }
 
 GalleryItem.propTypes = {
-  post: PropTypes.shape({
+  data: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    poster_path: PropTypes.string,
-    title: PropTypes.string.isRequired,
+    year: PropTypes.number.isRequired,
+    make: PropTypes.string.isRequired,
+    model: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    img: PropTypes.string,
+    description: PropTypes.string,
+    fuelConsumption: PropTypes.string,
+    engineSize: PropTypes.string,
+    accessories: PropTypes.arrayOf(PropTypes.string),
+    functionalities: PropTypes.arrayOf(PropTypes.string).isRequired,
+    rentalPrice: PropTypes.string.isRequired,
+    rentalCompany: PropTypes.string.isRequired,
+    address: PropTypes.string.isRequired,
+    rentalConditions: PropTypes.string,
+    mileage: PropTypes.number.isRequired,
   }).isRequired,
 };
 

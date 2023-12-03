@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import GalleryItem from './GalleryItem/GalleryItem';
 import { Container } from './GalleryList.styled';
@@ -13,18 +13,27 @@ function GalleryList({ data }) {
   );
 }
 
-// GalleryList.propTypes = {
-//   results: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number.isRequired,
-//       poster_path: PropTypes.string,
-//       title: PropTypes.string.isRequired,
-//     }).isRequired,
-//   ).isRequired,
-//   // title: PropTypes.string.isRequired,
-//   loading: PropTypes.bool.isRequired,
-//   onLoadMore: PropTypes.func.isRequired,
-//   total: PropTypes.number.isRequired,
-// };
+GalleryList.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      year: PropTypes.number.isRequired,
+      make: PropTypes.string.isRequired,
+      model: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      img: PropTypes.string,
+      description: PropTypes.string,
+      fuelConsumption: PropTypes.string,
+      engineSize: PropTypes.string,
+      accessories: PropTypes.arrayOf(PropTypes.string),
+      functionalities: PropTypes.arrayOf(PropTypes.string).isRequired,
+      rentalPrice: PropTypes.string.isRequired,
+      rentalCompany: PropTypes.string.isRequired,
+      address: PropTypes.string.isRequired,
+      rentalConditions: PropTypes.string,
+      mileage: PropTypes.number.isRequired,
+    }).isRequired,
+  ).isRequired,
+};
 
 export default GalleryList;

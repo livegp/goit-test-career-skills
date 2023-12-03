@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 
 import GalleryList from '../components/GalleryList/GalleryList';
@@ -7,10 +8,15 @@ import { useGetAdvertsQuery } from '../services/advertsSlice';
 function Сatalog() {
   const { data, error, isLoading } = useGetAdvertsQuery();
 
+  useEffect(() => {
+    if (error) {
+      toast.error(`An error occurred while receiving data: ${error}`);
+    }
+  }, [error]);
+
   return (
     <>
       {isLoading && <Loader />}
-      {error && <div>{toast.error('Error deleting contact:', error)}</div>}
       {!isLoading && !error && <GalleryList data={data} />}
     </>
   );

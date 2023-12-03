@@ -18,7 +18,7 @@ export const Container = styled.li`
   }
 `;
 
-export const NoneImgBox = styled.div`
+export const ImgBox = styled.div`
   display: grid;
   width: 100%;
   aspect-ratio: 1/1;

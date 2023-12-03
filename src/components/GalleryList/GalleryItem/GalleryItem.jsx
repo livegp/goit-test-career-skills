@@ -1,13 +1,7 @@
 import PropTypes from 'prop-types';
 import { FaCar } from 'react-icons/fa';
 
-import {
-  Box,
-  Container,
-  NoneImgBox,
-  SubTitle,
-  Title,
-} from './GalleryItem.styled';
+import { Box, Container, ImgBox, SubTitle, Title } from './GalleryItem.styled';
 import Checkbox from '../../Checkbox/Checkbox';
 import LoadMoreButton from '../../LoadMoreButton/LoadMoreButton';
 
@@ -34,13 +28,13 @@ function GalleryItem({ data }) {
     <Container>
       <Checkbox />
       <div>
-        {img ? (
-          <img src={img} width={250} alt={make} role="presentation" />
-        ) : (
-          <NoneImgBox>
+        <ImgBox>
+          {img ? (
+            <img src={img} width={250} alt={make} role="presentation" />
+          ) : (
             <FaCar />
-          </NoneImgBox>
-        )}
+          )}
+        </ImgBox>
         <Box>
           <Title>
             <p>

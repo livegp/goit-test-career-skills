@@ -1,17 +1,29 @@
 import styled from 'styled-components';
 
+export const Back = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-position: 25% 75%;
+  background-size: cover;
+  background-clip: border-box;
+  background-origin: border-box;
+  background-image: linear-gradient(
+      to right,
+      rgba(var(--bg-primary), 1),
+      rgba(var(--bg-primary), 0.7),
+      rgba(var(--bg-primary), 0)
+    ),
+    url('./img/avtomobili.webp');
+
+  background-repeat: no-repeat;
+`;
+
 export const Title = styled.h1`
   font-size: 40px;
   font-weight: bold;
-  margin-bottom: 25px;
   color: rgba(var(--accent), 1);
   transition: var(--trans);
-`;
-
-export const Back = styled.div`
-  padding: 24px 0 483px 0;
-  background-position: 77px 241px;
-  background-size: 446px 669px;
-  background-image: url('./img/avtomobili.webp');
-  background-repeat: no-repeat;
 `;

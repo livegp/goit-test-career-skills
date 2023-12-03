@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const Button = styled.button`
-  padding: 8px 16px;
+const ButtonStyled = styled.button`
+  padding: 12px;
   border-radius: 12px;
   text-align: center;
   border: 0;
@@ -9,7 +9,6 @@ const Button = styled.button`
   cursor: pointer;
   font-family: inherit;
   max-width: 100%;
-  height: 44px;
   box-shadow:
     0px 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14),
@@ -30,4 +29,4 @@ const Button = styled.button`
   }
 `;
 
-export default Button;
+export default ButtonStyled;

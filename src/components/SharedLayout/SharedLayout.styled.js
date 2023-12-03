@@ -12,4 +12,8 @@ export const Container = styled.div`
   width: 100%;
   padding: 25px 10px;
   margin: 0 auto;
+
+  display: grid;
+  justify-items: center;
+  gap: 25px;
 `;

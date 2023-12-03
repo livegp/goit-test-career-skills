@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import { FaCar } from 'react-icons/fa';
 
 import { Box, Container, ImgBox, SubTitle, Title } from './GalleryItem.styled';
+import Button from '../../Button/Button';
 import Checkbox from '../../Checkbox/Checkbox';
-import LoadMoreButton from '../../LoadMoreButton/LoadMoreButton';
 
 function GalleryItem({ data }) {
   const {
@@ -23,6 +23,8 @@ function GalleryItem({ data }) {
   const city = addressWords[1].trim();
   const country = addressWords[2] ? addressWords[2].trim() : '';
   const firstFunctionality = functionalities[0];
+
+  const title = 'Learn more';
 
   return (
     <Container>
@@ -48,7 +50,7 @@ function GalleryItem({ data }) {
           </SubTitle>
         </Box>
       </div>
-      <LoadMoreButton>Learn more</LoadMoreButton>
+      <Button title={title} />
     </Container>
   );
 }

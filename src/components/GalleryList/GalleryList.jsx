@@ -2,14 +2,20 @@ import PropTypes from 'prop-types';
 
 import GalleryItem from './GalleryItem/GalleryItem';
 import { Container } from './GalleryList.styled';
+import Button from '../Button/Button';
 
-function GalleryList({ data }) {
+function GalleryList({ data, total }) {
+  const title = 'Load more';
+
   return (
-    <Container>
-      {data.map(item => (
-        <GalleryItem key={item.id} data={item} />
-      ))}
-    </Container>
+    <>
+      <Container>
+        {data.map(item => (
+          <GalleryItem key={item.id} data={item} />
+        ))}
+      </Container>
+      {data.length < total && <Button title={title} />}
+    </>
   );
 }
 
@@ -34,6 +40,7 @@ GalleryList.propTypes = {
       mileage: PropTypes.number.isRequired,
     }).isRequired,
   ).isRequired,
+  total: PropTypes.number.isRequired,
 };
 
 export default GalleryList;

@@ -1,4 +1,4 @@
-import{s as a,j as r}from"./index-ft7c1fMM.js";const o=a.div`
+import{s as a,j as r}from"./index-c-PSydYS.js";const i=a.div`
   height: 100%;
   width: 100%;
   display: flex;
@@ -19,7 +19,8 @@ import{s as a,j as r}from"./index-ft7c1fMM.js";const o=a.div`
   background-repeat: no-repeat;
 `,t=a.h1`
   font-size: 40px;
+  line-height: 48px;
   font-weight: bold;
   color: rgba(var(--accent), 1);
   transition: var(--trans);
-`;function e(){return r.jsx(o,{children:r.jsxs(t,{children:["Find the car ",r.jsx("br",{})," of your dreams"]})})}export{e as default};
+`;function e(){return r.jsx(i,{children:r.jsxs(t,{children:["Find the car ",r.jsx("br",{})," of your dreams"]})})}export{e as default};

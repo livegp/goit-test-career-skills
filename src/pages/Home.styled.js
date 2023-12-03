@@ -10,6 +10,8 @@ export const Title = styled.h1`
 
 export const Back = styled.div`
   padding: 24px 0 483px 0;
+  background-position: 77px 241px;
+  background-size: 446px 669px;
   background-image: url('./img/avtomobili.webp');
   background-repeat: no-repeat;
 `;

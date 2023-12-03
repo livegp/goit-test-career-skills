@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import GlobalStyle from '../../GlobalStyle.styled';
+import Head from '../Head/Head';
 import ScrollTop from '../ScrollTop/ScrollTop';
 
 // const NotFound = lazy(() => import('../../pages/NotFound'));
@@ -15,6 +16,7 @@ const Favorites = lazy(() => import('../../pages/Favorites'));
 function App() {
   return (
     <>
+      <Head />
       <GlobalStyle />
       <ScrollTop />
       <Suspense fallback={<Loader />}>

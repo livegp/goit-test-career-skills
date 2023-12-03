@@ -7,8 +7,6 @@ ${normalize}
 
 ${reset}
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
-
 :root {
   --trans: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

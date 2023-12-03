@@ -1,9 +1,11 @@
-import{s as t,j as r,G as c,r as a,L as g,N as p,c as h,O as x}from"./index-1p8pgjvQ.js";import m from"./Loader-N2hQktNA.js";const v=t.div`
+import{s as t,j as r,G as c,r as a,L as g,N as h,c as p,O as x}from"./index-WYZ1W9ld.js";import m from"./Loader-LJJnGNOx.js";const v=t.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
 `,l=t.div`
   max-width: 1160px;
+  height: 100%;
+  width: 100%;
   padding: 25px 10px;
   margin: 0 auto;
 `,u=t.footer`
@@ -83,7 +85,7 @@ import{s as t,j as r,G as c,r as a,L as g,N as p,c as h,O as x}from"./index-1p8p
     height: 100%;
     gap: 5px;
   }
-`,s=t(p)`
+`,s=t(h)`
   display: block;
   border-radius: 4px;
   border: 2px solid transparent;
@@ -138,7 +140,7 @@ import{s as t,j as r,G as c,r as a,L as g,N as p,c as h,O as x}from"./index-1p8p
     opacity: 0;
     display: none;
   }
-`,d=h`   
+`,d=p`   
   0% {
     transform: rotate(-360deg) scale(0);
     opacity: 0;
@@ -151,4 +153,9 @@ import{s as t,j as r,G as c,r as a,L as g,N as p,c as h,O as x}from"./index-1p8p
   animation: ${d} 0.5s;
 `,B=t(C)`
   animation: ${d} 0.5s;
-`;function E(){const[e,o]=a.useState(()=>{const i=window.matchMedia("(prefers-color-scheme: dark)").matches;return localStorage.getItem("theme")||(i?"dark":"light")});a.useEffect(()=>{localStorage.setItem("theme",e)},[e]),a.useEffect(()=>{const{body:i}=document;i.dataset.theme=e},[e]);const n=()=>{o(e==="light"?"dark":"light")};return r.jsxs(T,{className:"switcher",children:[r.jsx("input",{type:"checkbox",onChange:n,checked:e==="dark"}),e==="dark"?r.jsx(S,{}):r.jsx(B,{})]})}function H(){return r.jsx(b,{children:r.jsxs(j,{children:[r.jsx(k,{}),r.jsx(z,{}),r.jsx(E,{})]})})}const F=t.main``;function N(){return r.jsx(F,{children:r.jsx(l,{children:r.jsx(a.Suspense,{fallback:r.jsx(m,{}),children:r.jsx(x,{})})})})}function R(){return r.jsxs(v,{children:[r.jsx(H,{}),r.jsx(N,{}),r.jsx(f,{})]})}export{R as default};
+`;function E(){const[e,o]=a.useState(()=>{const i=window.matchMedia("(prefers-color-scheme: dark)").matches;return localStorage.getItem("theme")||(i?"dark":"light")});a.useEffect(()=>{localStorage.setItem("theme",e)},[e]),a.useEffect(()=>{const{body:i}=document;i.dataset.theme=e},[e]);const n=()=>{o(e==="light"?"dark":"light")};return r.jsxs(T,{className:"switcher",children:[r.jsx("input",{type:"checkbox",onChange:n,checked:e==="dark"}),e==="dark"?r.jsx(S,{}):r.jsx(B,{})]})}function H(){return r.jsx(b,{children:r.jsxs(j,{children:[r.jsx(k,{}),r.jsx(z,{}),r.jsx(E,{})]})})}const F=t.main`
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+`;function N(){return r.jsx(F,{children:r.jsx(l,{children:r.jsx(a.Suspense,{fallback:r.jsx(m,{}),children:r.jsx(x,{})})})})}function R(){return r.jsxs(v,{children:[r.jsx(H,{}),r.jsx(N,{}),r.jsx(f,{})]})}export{R as default};

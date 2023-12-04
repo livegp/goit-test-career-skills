@@ -4,7 +4,7 @@ import GalleryItem from './GalleryItem/GalleryItem';
 import { Container } from './GalleryList.styled';
 import Button from '../Button/Button';
 
-function GalleryList({ data, total }) {
+function GalleryList({ data, total = 32 }) {
   const title = 'Load more';
 
   return (

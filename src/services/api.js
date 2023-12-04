@@ -31,11 +31,21 @@ export const advertApi = createApi({
   }),
   tagTypes: ['Advert'],
   endpoints: builder => ({
-    getAdverts: builder.query({
-      query: () => ({ url: '/advert', method: 'get' }),
+    getAll: builder.query({
+      query: () => ({
+        url: '/advert',
+        method: 'get',
+      }),
+      providesTags: ['Advert'],
+    }),
+    getById: builder.query({
+      query: id => ({
+        url: `advert/${id}`,
+        method: 'get',
+      }),
       providesTags: ['Advert'],
     }),
   }),
 });
 
-export const { useGetAdvertsQuery } = advertApi;
+export const { useGetAllQuery, useGetByIdQuery } = advertApi;

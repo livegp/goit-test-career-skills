@@ -3,10 +3,10 @@ import { toast } from 'react-toastify';
 
 import GalleryList from '../components/GalleryList/GalleryList';
 import Loader from '../components/Loader/Loader';
-import { useGetAdvertsQuery } from '../services/advertsSlice';
+import { useGetAllQuery } from '../services/api';
 
 function Сatalog() {
-  const { data, error, isLoading } = useGetAdvertsQuery();
+  const { data, error, isLoading, isSuccess } = useGetAllQuery();
 
   useEffect(() => {
     if (error) {
@@ -17,7 +17,7 @@ function Сatalog() {
   return (
     <>
       {isLoading && <Loader />}
-      {!isLoading && !error && <GalleryList data={data} />}
+      {isSuccess && <GalleryList data={data} />}
     </>
   );
 }

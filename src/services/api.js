@@ -27,7 +27,7 @@ const axiosBaseQuery =
 export const advertApi = createApi({
   reducerPath: 'advert',
   baseQuery: axiosBaseQuery({
-    baseUrl: 'https://65678b2964fcff8d73109045.mockapi.io',
+    baseUrl: import.meta.env.VITE_API_BASE_URL,
   }),
   tagTypes: ['Advert'],
   endpoints: builder => ({

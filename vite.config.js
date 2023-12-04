@@ -42,5 +42,5 @@ export default defineConfig({
     // autoAlias({ mode: 'sync' }),
     // Icons()
   ],
-  base: environment.VITE_BASE_URL || '/', // має відповідати шляху в index.jsx
+  base: environment.VITE_BASE_URL || '/',
 });

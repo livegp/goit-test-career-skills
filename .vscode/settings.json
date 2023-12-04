@@ -21,7 +21,7 @@
 
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
-    "package.json": "vite.config.js, pnpm-lock.yaml, .stylelintrc, .stylelintignore, .eslintrc, .eslintignore, .eslintcache, .prettierrc, .prettierignore, .gitignore, .gitattributes, .swcrc, .env, 6"
+    "package.json": "vite.config.js, pnpm-lock.yaml, .stylelintrc, .stylelintignore, .eslintrc, .eslintignore, .eslintcache, .prettierrc, .prettierignore, .gitignore, .gitattributes, .swcrc, .env, .env.example, 6"
   },
   "cSpell.words": [
     "contac",

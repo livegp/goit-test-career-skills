@@ -4,7 +4,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 function Head() {
   return (
     <HelmetProvider>
-      <Helmet>
+      <Helmet prioritizeSeoTags>
         <title>AutoMarket</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />

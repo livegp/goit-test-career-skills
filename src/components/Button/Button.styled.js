@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const ButtonStyled = styled.button`
+  display: block;
   padding: 12px;
   border-radius: 12px;
   text-align: center;

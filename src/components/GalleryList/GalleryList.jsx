@@ -4,7 +4,7 @@ import GalleryItem from './GalleryItem/GalleryItem';
 import { Container } from './GalleryList.styled';
 import Button from '../Button/Button';
 
-function GalleryList({ data, total = 32 }) {
+function GalleryList({ data, handleLoadMore }) {
   const title = 'Load more';
 
   return (
@@ -14,7 +14,7 @@ function GalleryList({ data, total = 32 }) {
           <GalleryItem key={item.id} data={item} />
         ))}
       </Container>
-      {data.length < total && <Button title={title} />}
+      <Button title={title} handleLoadMore={handleLoadMore} />
     </>
   );
 }
@@ -40,7 +40,7 @@ GalleryList.propTypes = {
       mileage: PropTypes.number.isRequired,
     }).isRequired,
   ).isRequired,
-  total: PropTypes.number.isRequired,
+  handleLoadMore: PropTypes.func.isRequired,
 };
 
 export default GalleryList;

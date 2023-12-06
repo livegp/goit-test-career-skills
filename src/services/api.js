@@ -32,18 +32,18 @@ export const advertApi = createApi({
   tagTypes: ['Advert'],
   endpoints: builder => ({
     getAll: builder.query({
-      query: () => ({
-        url: '/advert',
+      query: ({ page, limit }) => ({
+        url: `/advert?page=${page}&limit=${limit}`,
         method: 'get',
       }),
-      providesTags: ['Advert'],
+      providesTags: { type: 'Advert', id: 'LIST' },
     }),
     getById: builder.query({
       query: id => ({
         url: `advert/${id}`,
         method: 'get',
       }),
-      providesTags: ['Advert'],
+      providesTags: { type: 'Advert', id: 'LIST' },
     }),
   }),
 });

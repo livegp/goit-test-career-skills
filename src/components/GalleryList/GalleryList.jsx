@@ -5,8 +5,6 @@ import { Container } from './GalleryList.styled';
 import Button from '../Button/Button';
 
 function GalleryList({ data, handleLoadMore }) {
-  const title = 'Load more';
-
   return (
     <>
       <Container>
@@ -14,7 +12,7 @@ function GalleryList({ data, handleLoadMore }) {
           <GalleryItem key={item.id} data={item} />
         ))}
       </Container>
-      <Button title={title} handleLoadMore={handleLoadMore} />
+      <Button onClick={handleLoadMore}>Load more</Button>
     </>
   );
 }

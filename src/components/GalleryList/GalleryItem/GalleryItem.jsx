@@ -24,8 +24,6 @@ function GalleryItem({ data }) {
   const country = addressWords[2] ? addressWords[2].trim() : '';
   const firstFunctionality = functionalities[0];
 
-  const title = 'Learn more';
-
   return (
     <Container>
       <Checkbox />
@@ -50,7 +48,7 @@ function GalleryItem({ data }) {
           </SubTitle>
         </Box>
       </div>
-      <Button title={title} />
+      <Button>Learn more</Button>
     </Container>
   );
 }

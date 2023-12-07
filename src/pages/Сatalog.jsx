@@ -10,28 +10,19 @@ function Catalog() {
   const [allData, setAllData] = useState([]);
 
   const queryOptions = useMemo(() => ({ page, limit: 12 }), [page]);
-  const { data, error, isLoading, isSuccess, refetch } = useGetAllQuery(
-    queryOptions,
-    { refetchOnMountOrArgChange: false },
-  );
+  const { data, error, isLoading, isSuccess } = useGetAllQuery(queryOptions);
 
   useEffect(() => {
     if (error) {
       toast.error(`An error occurred while receiving data: ${error.message}`);
     }
 
-    if (data) {
-      setAllData(previousData =>
-        data.length > 0 ? [...previousData, ...data] : previousData,
-      );
+    if (data && data.length > 0) {
+      setAllData(previousData => [...previousData, ...data]);
     }
   }, [error, data]);
 
-  useEffect(() => {
-    refetch(queryOptions);
-  }, [page, refetch, queryOptions]);
-
-  const handleLoadMoreAndRefetch = useCallback(() => {
+  const handleLoadMore = useCallback(() => {
     setPage(previousPage => previousPage + 1);
   }, []);
 
@@ -39,7 +30,11 @@ function Catalog() {
     <>
       {isLoading && <Loader />}
       {isSuccess && allData.length > 0 && (
-        <GalleryList data={allData} handleLoadMore={handleLoadMoreAndRefetch} />
+        <GalleryList
+          data={allData}
+          isSuccess={isSuccess}
+          handleLoadMore={handleLoadMore}
+        />
       )}
     </>
   );

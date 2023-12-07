@@ -12,7 +12,9 @@
   },
   "eslint.alwaysShowStatus": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit",
+    "source.organizeImports": true,
+    "source.addMissingImports": true
   },
   "files.autoSave": "onFocusChange",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",

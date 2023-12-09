@@ -24,7 +24,7 @@ const axiosBaseQuery =
     }
   };
 
-export const advertApi = createApi({
+export const api = createApi({
   reducerPath: 'advert',
   baseQuery: axiosBaseQuery({
     baseUrl: import.meta.env.VITE_API_BASE_URL,
@@ -36,16 +36,29 @@ export const advertApi = createApi({
         url: `/advert?page=${page}&limit=${limit}`,
         method: 'get',
       }),
-      providesTags: { type: 'Advert', id: 'LIST' },
+      serializeQueryArgs: ({ endpointName }) => endpointName,
+      merge: (currentCache, newItems) => {
+        currentCache.push(...newItems);
+      },
+      forceRefetch({ currentArg, previousArg }) {
+        return currentArg !== previousArg;
+      },
+      providesTags: (result, error, page) =>
+        result
+          ? [
+              ...result.map(({ id }) => ({ type: 'Advert', id })),
+              { type: 'Advert', id: 'LIST' },
+            ]
+          : [{ type: 'Advert', id: 'LIST' }],
     }),
     getById: builder.query({
       query: id => ({
         url: `advert/${id}`,
         method: 'get',
       }),
-      providesTags: { type: 'Advert', id: 'LIST' },
+      providesTags: [{ type: 'Advert', id: 'LIST' }],
     }),
   }),
 });
 
-export const { useGetAllQuery, useGetByIdQuery } = advertApi;
+export const { useGetAllQuery, useGetByIdQuery } = api;

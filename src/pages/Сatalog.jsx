@@ -1,14 +1,14 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 
 import GalleryList from '../components/GalleryList/GalleryList';
 import Loader from '../components/Loader/Loader';
-import { useGetAllQuery } from '../services/api';
+import { api, useGetAllQuery } from '../services/api';
 
 function Catalog() {
+  const dispatch = useDispatch();
   const [page, setPage] = useState(1);
-  const [allData, setAllData] = useState([]);
-
   const { data, error, isLoading, isSuccess } = useGetAllQuery({
     page,
     limit: 12,
@@ -19,9 +19,7 @@ function Catalog() {
       toast.error(`An error occurred while receiving data: ${error.message}`);
   }, [error]);
 
-  useEffect(() => {
-    data?.length > 0 && setAllData(previousData => [...previousData, ...data]);
-  }, [data]);
+  useEffect(() => () => dispatch(api.util.resetApiState()), [dispatch]);
 
   const handleLoadMore = useCallback(() => {
     setPage(previousPage => previousPage + 1);
@@ -30,9 +28,9 @@ function Catalog() {
   return (
     <>
       {isLoading && <Loader />}
-      {isSuccess && allData.length > 0 && (
+      {isSuccess && data?.length > 0 && (
         <GalleryList
-          data={allData}
+          data={data}
           isSuccess={isSuccess}
           handleLoadMore={handleLoadMore}
         />

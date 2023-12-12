@@ -1,25 +1,36 @@
 import { useCallback, useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 
 import GalleryList from '../components/GalleryList/GalleryList';
 import Loader from '../components/Loader/Loader';
-import { api, useGetAllQuery } from '../services/api';
+import { useGetAllQuery } from '../services/api';
 
 function Catalog() {
-  const dispatch = useDispatch();
   const [page, setPage] = useState(1);
+  const [allData, setAllData] = useState([]);
   const { data, error, isLoading, isSuccess } = useGetAllQuery({
     page,
-    limit: 12,
+    limit: 3,
   });
+
+  useEffect(() => {
+    if (isSuccess && data) {
+      setAllData(previousData => {
+        const newDataWithoutDuplicates = data.filter(
+          newDataItem =>
+            !previousData.some(
+              previousDataItem => previousDataItem.id === newDataItem.id,
+            ),
+        );
+        return [...previousData, ...newDataWithoutDuplicates];
+      });
+    }
+  }, [isSuccess, data]);
 
   useEffect(() => {
     error &&
       toast.error(`An error occurred while receiving data: ${error.message}`);
   }, [error]);
-
-  useEffect(() => () => dispatch(api.util.resetApiState()), [dispatch]);
 
   const handleLoadMore = useCallback(() => {
     setPage(previousPage => previousPage + 1);
@@ -28,9 +39,9 @@ function Catalog() {
   return (
     <>
       {isLoading && <Loader />}
-      {isSuccess && data?.length > 0 && (
+      {isSuccess && allData?.length > 0 && (
         <GalleryList
-          data={data}
+          data={allData}
           isSuccess={isSuccess}
           handleLoadMore={handleLoadMore}
         />

@@ -8,7 +8,7 @@ function GalleryList({ data, handleLoadMore }) {
   return (
     <>
       <Container>
-        {data.map(item => (
+        {data?.map(item => (
           <GalleryItem key={item.id} data={item} />
         ))}
       </Container>

@@ -24,7 +24,7 @@ const axiosBaseQuery =
     }
   };
 
-export const api = createApi({
+export const advertApi = createApi({
   reducerPath: 'advert',
   baseQuery: axiosBaseQuery({
     baseUrl: import.meta.env.VITE_API_BASE_URL,
@@ -36,14 +36,15 @@ export const api = createApi({
         url: `/advert?page=${page}&limit=${limit}`,
         method: 'get',
       }),
-      serializeQueryArgs: ({ endpointName }) => endpointName,
+      serializeQueryArgs: ({ queryArgs }) => queryArgs,
+      // serializeQueryArgs: ({ endpointName }) => endpointName,
       merge: (currentCache, newItems) => {
         currentCache.push(...newItems);
       },
       forceRefetch({ currentArg, previousArg }) {
-        return currentArg !== previousArg;
+        return currentArg?.page !== previousArg?.page;
       },
-      providesTags: (result, error, page) =>
+      providesTags: result =>
         result
           ? [
               ...result.map(({ id }) => ({ type: 'Advert', id })),
@@ -61,4 +62,4 @@ export const api = createApi({
   }),
 });
 
-export const { useGetAllQuery, useGetByIdQuery } = api;
+export const { useGetAllQuery, useGetByIdQuery } = advertApi;

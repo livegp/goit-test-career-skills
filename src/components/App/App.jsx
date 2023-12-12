@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import GlobalStyle from '../../GlobalStyle.styled';
+import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import Head from '../Head/Head';
 import ScrollTop from '../ScrollTop/ScrollTop';
 
@@ -25,7 +26,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="catalog" element={<Сatalog />} />
             <Route path="favorites" element={<Favorites />} />
-            <Route path="*" element={<Navigate to="/" />} />
+            {/* <Route path="*" element={<Navigate to="/" />} /> */}
             {/* <Route path="*" element={<NotFound />} /> */}
           </Route>
         </Routes>

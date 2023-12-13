@@ -1,4 +1,4 @@
-import { createApi } from '@reduxjs/toolkit/query/react';
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import axios from 'axios';
 
 const axiosBaseQuery =
@@ -26,7 +26,7 @@ const axiosBaseQuery =
 
 export const advertApi = createApi({
   reducerPath: 'advert',
-  baseQuery: axiosBaseQuery({
+  baseQuery: fetchBaseQuery({
     baseUrl: import.meta.env.VITE_API_BASE_URL,
   }),
   tagTypes: ['Advert'],
